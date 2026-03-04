@@ -75,8 +75,20 @@ nav { display: flex; justify-content: space-between; align-items: center; }
 .footer-bottom { text-align: center; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 60px; }
 
 /* Mobile */
+
 @media (max-width: 768px) {
-    .blog-post { flex-direction: column !important; }
-    .blog-img, .blog-content { width: 100%; }
-    .hero-content h1 { font-size: 2.5rem; }
-        }
+    .hero-content h1 {
+        font-size: 2.2rem; /* Shrinks the text so it doesn't push the screen */
+    }
+
+    .container {
+        width: 100%;
+        padding: 40px 15px; /* Gives content breathing room without overflow */
+    }
+
+    .blog-post, .menu-card, .team-card {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
