@@ -1,3 +1,10 @@
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* This hides the white space on the right */
+    position: relative;
+}
 :root {
     --cream: #FAF7F2;
     --beige: #F2EBE1;
