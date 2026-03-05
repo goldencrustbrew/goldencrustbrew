@@ -85,19 +85,46 @@ nav { display: flex; justify-content: space-between; align-items: center; }
 
 /* Mobile */
 
+/* --- THE MOBILE PATCH --- */
 @media (max-width: 768px) {
+    /* Shrinks the Hero Title so it doesn't push the screen wide */
     .hero-content h1 {
-        font-size: 2.2rem; /* Shrinks the text so it doesn't push the screen */
+        font-size: 2.2rem !important;
+    }
+
+    /* FIX: Stacks Blog image on TOP of text so it's not awkward */
+    .blog-post {
+        flex-direction: column !important; 
+        gap: 20px;
+        align-items: center;
+    }
+
+    .blog-img {
+        width: 100% !important; 
+        height: 250px !important;
+        object-fit: cover;
+    }
+
+    .blog-content {
+        width: 100% !important;
+        padding: 0 10px;
+    }
+
+    /* FIX: Ensures Team members stack vertically and stay visible */
+    .team-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important; 
+        gap: 30px;
+    }
+
+    /* FIX: Ensures Contact section stacks properly */
+    .footer-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 40px;
     }
 
     .container {
-        width: 100%;
-        padding: 40px 15px; /* Gives content breathing room without overflow */
-    }
-
-    .blog-post, .menu-card, .team-card {
-        width: 100% !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
+        padding: 40px 15px !important;
     }
 }
