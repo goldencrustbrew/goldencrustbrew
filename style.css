@@ -29,8 +29,26 @@ body { font-family: 'Poppins', sans-serif; background: var(--cream); color: var(
 /* Navigation */
 header { position: absolute; width: 100%; z-index: 1000; padding: 25px 5%; }
 nav { display: flex; justify-content: space-between; align-items: center; }
-.brand-main { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: #fff; }
-.brand-sub { font-size: 1.1rem; color: var(--accent); font-weight: 300; margin-left: 5px; }
+.logo {
+    display: flex;
+    flex-direction: column; /* This stacks them */
+    line-height: 1.2;
+}
+
+.brand-main {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem; 
+    color: #ffffff; /* This is your Big White Lettering */
+    font-weight: 600;
+}
+
+.brand-sub {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: var(--accent); /* This is your Yellow font */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
 .nav-links { display: flex; list-style: none; gap: 25px; }
 .nav-links a { color: #fff; text-decoration: none; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
 
